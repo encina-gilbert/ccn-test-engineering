@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 300vh;
+}
+
+.navbar-fixed {
+  margin-bottom: 20px;
+}
+
+.sidenav {
+  .logo-container {
+    margin-bottom: -18px;
+    overflow: hidden;
+    margin: 2px solid #ddd;
+  }
+}
+
+nav {
+  .logo {
+    height: 57px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  nav {
+    .logo {
+      height: 64px;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  nav .brand-logo {
+    left: 100% !important;
+    transform: translate(-100%);
+  }
+}
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 90%;
+  }
+}
