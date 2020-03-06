@@ -7,41 +7,35 @@
 body {
   height: 300vh;
 }
-
-.navbar-fixed {
-  margin-bottom: 20px;
+.fixed-action-btn {
+  padding: 0;
+  left: 25px;
+  top: 25px;
 }
 
+.nav-wrapper .brand-logo {
+  display: block;
+  height: 100%;
+  img {
+    height: 100%;
+  }
+  // background-color: white;
+  // background-image: url('../img/continental-logo-transparent-background.png');
+}
 .sidenav {
   .logo-container {
-    margin-bottom: -18px;
-    overflow: hidden;
-    margin: 2px solid #ddd;
-  }
-}
-
-nav {
-  .logo {
-    height: 57px;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  nav {
-    .logo {
-      height: 64px;
+    .logo-link {
+      padding: 0;
+      height: 100%;
     }
   }
 }
-
-@media only screen and (max-width: 992px) {
-  nav .brand-logo {
-    left: 100% !important;
-    transform: translate(-100%);
-  }
-}
 @media only screen and (min-width: 993px) {
-  .container {
-    width: 90%;
+  .navbar-fixed {
+    display: none;
+  }
+  .main-container {
+    margin-left: 300px;
+    width: calc(100vw - 300px);
   }
 }

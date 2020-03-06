@@ -21,35 +21,45 @@
   </head>
 
   <body>
-    <header class="navbar-fixed">
-      <nav class="black">
-        <div class="container">
-          <div class="nav-wrapper">
-            <a href="" class="brand-logo"
-              ><img class="logo" src="assets/img/continental-logo.jpg" alt=""
-            /></a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"
-              ><i class="material-icons">menu</i></a
-            >
-            <ul class="right hide-on-med-and-down">
-              <li><a href="#">Master Sample</a></li>
-              <li><a href="#">Spare Parts</a></li>
-              <li><a href="#">Documents</a></li>
-              <li><a href="#">Login</a></li>
-            </ul>
-          </div>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper black">
+          <a
+            href="#"
+            data-target="sidebar"
+            class="sidenav-trigger amber-text text-accent-4"
+            ><i class="material-icons">menu</i></a
+          >
+          <a href="#" class="brand-logo">
+            <img
+              src="assets/img/continental-logo-transparent-background.png"
+              alt=""
+            />
+          </a>
         </div>
       </nav>
+    </div>
 
-      <ul class="sidenav" id="mobile-demo">
-        <li><a href="#">Master Sample</a></li>
-        <li><a href="#">Spare Parts</a></li>
-        <li><a href="#">Documents</a></li>
-        <li><a href="#">Login</a></li>
-      </ul>
-    </header>
+    <!-- Sidebar -->
+    <ul class="sidenav sidenav-fixed" id="sidebar">
+      <li class="logo-container">
+        <a href="#" class="logo-link"
+          ><img
+            class="responsive-img logo"
+            src="assets/img/continental-logo-small.jpg"
+            alt=""
+        /></a>
+      </li>
+      <li><a href="#">Master Sample</a></li>
+      <li><a href="#">Spare Parts</a></li>
+      <li><a href="#">Documents</a></li>
+      <li><a href="#">Login</a></li>
+    </ul>
 
-    <div class="description-container">
+    <div class="main-container">
+      <div class="continental-logo">
+        <img src="" alt="" class="responsive-img" />
+      </div>
       <div class="row">
         <div class="col s12 l8 offset-l3">
           <table class="striped">
