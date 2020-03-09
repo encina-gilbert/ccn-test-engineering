@@ -36,6 +36,29 @@ body {
   h4 {
     text-transform: uppercase;
   }
+
+  .row .col {
+    padding: 0;
+  }
+
+  .owl-carousel {
+    padding: 10px 10px;
+
+    .owl-wrapper {
+      display: flex !important;
+    }
+
+    .owl-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      max-width: initial;
+    }
+  }
+
+  .table-container {
+    margin-top: 10px;
+  }
 }
 @media only screen and (min-width: 993px) {
   .navbar-fixed {
@@ -43,6 +66,5 @@ body {
   }
   .main-container {
     margin-left: 300px;
-    width: calc(100vw - 300px);
   }
 }
