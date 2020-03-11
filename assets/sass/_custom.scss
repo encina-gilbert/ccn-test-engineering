@@ -1,4 +1,30 @@
-// Global
+// Scrollbar
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+table tbody::-webkit-scrollbar {
+  height: 12px;
+}
+
+body,
+table tbody {
+  scrollbar-width: thin;
+  scrollbar-color: color('amber', 'darken-2') color('grey', 'lighten-2');
+}
+
+body::-webkit-scrollbar-track,
+table tbody::-webkit-scrollbar-track {
+  background: color('grey', 'lighten-2');
+}
+
+body::-webkit-scrollbar-thumb,
+table tbody::-webkit-scrollbar-thumb {
+  background-color: color('amber', 'darken-2');
+  border-radius: 6px;
+  border: 1px solid color('grey', 'lighten-2');
+}
+
 .col .row {
   margin: 0;
   padding: 10px;
@@ -28,17 +54,40 @@
 
 // Main Container
 .main-container {
-  .material-name,
-  .material-description {
+  .department-name {
+    background-color: #fff;
+    border-bottom: 1px solid #e0d0d0;
+    box-shadow: 2px 0 1px 0 rgba(0, 0, 0, 0.14),
+      3px 0 1px -2px rgba(0, 0, 0, 0.12), 1px 0 2px 0 rgba(0, 0, 0, 0.2);
+    font-size: 1.75rem;
     margin: 0;
-    padding: 15px 10px;
-  }
-  h4 {
+    text-align: center;
     text-transform: uppercase;
+    width: 100%;
+    padding: 15px;
+    position: fixed;
+    z-index: 997;
   }
 
-  .row .col {
-    padding: 0;
+  .table-container {
+    .material-name,
+    .material-description {
+      margin: 0;
+      padding: 15px 10px;
+      padding: 5px;
+    }
+
+    .scrollable-table {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  > .row {
+    margin-top: 5em;
+
+    .col {
+      padding: 0;
+    }
   }
 
   .owl-carousel {
@@ -50,14 +99,27 @@
 
     .owl-item img {
       width: 100%;
-      height: 100%;
+      max-height: 200px;
       object-fit: cover;
       max-width: initial;
+    }
+
+    .owl-dots .owl-dot.active span,
+    .owl-dots .owl-dot:hover span {
+      background: color('amber', 'accent-2');
     }
   }
 
   .table-container {
     margin-top: 10px;
+  }
+
+  .page-footer {
+    padding: 0;
+
+    .footer-copyright {
+      padding: 20px;
+    }
   }
 }
 
@@ -68,5 +130,9 @@
   }
   .main-container {
     margin-left: 300px;
+
+    .department-name {
+      margin-left: -150px;
+    }
   }
 }
