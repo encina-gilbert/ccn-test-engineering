@@ -1,12 +1,9 @@
-* {
+// Global
+.col .row {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  padding: 10px;
 }
 
-body {
-  height: 300vh;
-}
 .fixed-action-btn {
   padding: 0;
   left: 25px;
@@ -19,8 +16,6 @@ body {
   img {
     height: 100%;
   }
-  // background-color: white;
-  // background-image: url('../img/continental-logo-transparent-background.png');
 }
 .sidenav {
   .logo-container {
@@ -33,6 +28,11 @@ body {
 
 // Main Container
 .main-container {
+  .material-name,
+  .material-description {
+    margin: 0;
+    padding: 15px 10px;
+  }
   h4 {
     text-transform: uppercase;
   }
@@ -60,6 +60,8 @@ body {
     margin-top: 10px;
   }
 }
+
+// Responsive
 @media only screen and (min-width: 993px) {
   .navbar-fixed {
     display: none;
