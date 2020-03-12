@@ -45,16 +45,63 @@
     <ul class="sidenav sidenav-fixed" id="sidebar">
       <li class="logo-container">
         <a href="#" class="logo-link"
-          ><img
-            class="responsive-img logo"
-            src="assets/img/continental-logo-small.jpg"
-            alt=""
+          ><img class="logo" src="assets/img/continental-logo-small.jpg" alt=""
         /></a>
       </li>
-      <li><a href="#">Master Sample</a></li>
-      <li><a href="#">Spare Parts</a></li>
-      <li><a href="#">Documents</a></li>
-      <li><a href="#">Login</a></li>
+      <li>
+        <ul class="collapsible">
+          <li>
+            <div class="collapsible-header">
+              <i class="material-icons">filter_drama</i>Master Sample
+            </div>
+            <div class="collapsible-body">
+              <ul class="collapsible">
+                <li>
+                  <div class="collapsible-header">
+                    <i class="material-icons">filter_drama</i>MMC
+                  </div>
+                  <div class="collapsible-body">
+                    <span>A2C7629012300</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="collapsible-header">
+                    <i class="material-icons">place</i>HDSG EVO
+                  </div>
+                  <div class="collapsible-body">
+                    <span>A2C7629012300</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="collapsible-header">
+                    <i class="material-icons">whatshot</i>ISUZU
+                  </div>
+                  <div class="collapsible-body">
+                    <span>A2C7629012300</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header">
+              <i class="material-icons">place</i>Documents
+            </div>
+            <div class="collapsible-body">
+              <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header">
+              <i class="material-icons">whatshot</i>Spare Parts
+            </div>
+            <div class="collapsible-body">
+              <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#signin" class="waves-effect modal-trigger">Login</a></li>
     </ul>
 
     <div class="main-container">
@@ -164,6 +211,33 @@
       </footer>
     </div>
 
+    <!-- Login Modal -->
+    <div id="signin" class="modal">
+      <div class="modal-content">
+        <h5 class="center-align">LOGIN FORM</h5>
+        <form action="" method="post" autocomplete="off">
+          <div class="input-field">
+            <input id="email" type="email" class="validate" />
+            <label class="active" for="email">Email</label>
+            <span
+              class="helper-text"
+              data-error="Please input valid email address"
+            ></span>
+          </div>
+          <div class="input-field">
+            <input id="password" type="password" class="validate" />
+            <label class="active" for="password">Password</label>
+          </div>
+          <button
+            class="btn waves-effect waves-light amber accent-4 black-text"
+            type="submit"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+
     <!--JavaScript-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>
@@ -186,6 +260,12 @@
         document.addEventListener('DOMContentLoaded', function() {
           var elems = document.querySelectorAll('.carousel');
           var instances = M.Carousel.init(elems);
+        });
+
+        // Initialize Modal
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.modal');
+          var instances = M.Modal.init(elems);
         });
       })();
     </script>

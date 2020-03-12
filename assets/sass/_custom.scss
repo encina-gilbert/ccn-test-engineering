@@ -45,9 +45,29 @@ table tbody::-webkit-scrollbar-thumb {
 }
 .sidenav {
   .logo-container {
+    width: 100%;
     .logo-link {
       padding: 0;
-      height: 100%;
+      height: 143px;
+      width: 100%;
+
+      .logo {
+        width: 100%;
+      }
+    }
+  }
+
+  .collapsible {
+    .collapsible i {
+      padding-left: 10px;
+    }
+
+    .collapsible span {
+      padding-left: 70px;
+    }
+
+    li:hover {
+      background: color('yellow', 'lighten-3');
     }
   }
 }
@@ -120,6 +140,57 @@ table tbody::-webkit-scrollbar-thumb {
     .footer-copyright {
       padding: 20px;
     }
+  }
+}
+
+// Modal
+#signin.modal {
+  width: 350px;
+
+  h5 {
+    margin-top: 0;
+    letter-spacing: 1px;
+  }
+
+  .btn {
+    display: block;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 100%;
+  }
+}
+
+// Input Fields
+.input-field {
+  /* label color */
+  // label {
+  //   color: #000;
+  // }
+  /* label focus color */
+  input[type='email']:focus + label,
+  input[type='password']:focus + label {
+    color: color('amber', 'accent-3') !important;
+  }
+  /* label underline focus color */
+  input[type='email']:focus,
+  input[type='password']:focus {
+    // color: color('amber', 'accent-3') !important;
+    border-bottom: 1px solid color('amber', 'accent-3') !important;
+    box-shadow: 0 1px 0 0 color('amber', 'accent-3') !important;
+  }
+  /* valid color */
+  input[type='text'].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* invalid color */
+  input[type='text'].invalid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* icon prefix focus color */
+  .prefix.active {
+    color: #000;
   }
 }
 
